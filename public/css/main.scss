@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Roboto');
+/* VARIABLES */
+$color-uno: #DAE5FB;
+$color-dos: #3A7DFD;
+$color-add: #48DDA8;
+$color-danger: #ED4D4C;
+$font-family-p: 'Roboto', sans-serif;
+$font-family-h: 'Fjalla One', sans-serif;
+$color-grey: #F8F9FB;
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body{
+	font-family: $font-family-p;
+	font-size: 13px;
+	color: #535C6B;
+}
+h1, h2, h3, h4, h5, h6{ font-family: $font-family-h; }
+a{
+	text-decoration: none;
+	display: table;
+}
+input, select, textarea{
+	width: 100%;
+	padding: 0.7rem 1rem;
+	border: 1px solid #EFF0F5;
+	outline: none;
+	border-radius: 3px;
+	transition: all 0.5s;
+}
+select{cursor: pointer;}
+textarea{
+	height: 100px;
+	resize: none;
+}
+input[type="text"]:disabled{
+	border-radius: 5px;
+	background: #EAF1FD;
+	color: $color-dos;
+}
+input[type="button"], 
+input[type="submit"]{
+	background: $color-uno;
+	color: $color-dos;
+	display: block;
+	width: 150px;
+	cursor: pointer;
+	box-shadow: 0px 0px $color-dos inset;
+	padding: 0.8rem;
+}
+input[type="button"]:hover{	color: #fff; }
+input[type="button"]:active{transform: scale(0.9);}
+input[type="file"]{
+	background: #fff;
+}
+
+input[data-btn='atras'], input[data-btn='siguiente'], input[data-btn='final']{ display: inline-block; }
+
+input[data-btn='atras']{ border-radius: 50px 10px 10px 50px; text-align: right;}
+input[data-btn='atras']:hover{ box-shadow: -150px 0 $color-dos inset; padding-right: 7rem; }
+
+input[data-btn='siguiente']{ border-radius: 10px 50px 50px 10px; text-align: left; transition: all 0.5s; }
+input[data-btn='siguiente']:hover{ box-shadow: 150px 0 $color-dos inset; padding-left: 5.3rem;}
+
+input[data-btn='final']{
+	background: $color-add;
+	color: #fff;
+	cursor: pointer;
+
+}
+input[data-btn='final']:hover{ border-radius: 50px; background: #fff; color:$color-add; border: 2px solid $color-add}
+
+input[data-btn='siguiente'],
+input[data-btn='final']{
+	float: right;
+}
+
+input:invalid {
+  background-color: rgba($color-danger, 0.25);
+}
+.container{
+	.row{
+		.col-sm{
+			padding: 1rem;
+		}
+	}
+}
+.required{
+	position: absolute;
+	color: $color-danger;
+	font-size: 1.3rem;
+	top: 15px;
+	left: 3px;
+	font-weight: bold;
+}
+.error{
+	background: $color-danger;
+	color: #fff;
+	font-size: 10px;
+	padding: 0.2rem 0.5rem;
+	width: 100%;
+	display: block;
+	border-radius: 3px;
+}
+.header{
+	background:#FEFEFE;
+	border: 1px solid #EFF0F5;
+
+	.title{
+		text-align: center;
+		font-size: 1.3rem;
+		margin: 2rem;
+	}
+}
+
+.section-page{
+	border: 1px solid #EFF0F5;
+	background: $color-grey;
+	padding: 2rem;
+
+	h2{
+		/* text-align: right; */
+	}
+	p{
+		span{
+			color: $color-danger;
+			font-weight: bold;
+		}
+	}
+}
