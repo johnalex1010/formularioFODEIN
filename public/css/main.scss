@@ -8,6 +8,7 @@ $font-family-p: 'Roboto', sans-serif;
 $font-family-h: 'Fjalla One', sans-serif;
 $color-grey: #F8F9FB;
 
+/*Estilos generales*/
 *{
 	margin: 0;
 	padding: 0;
@@ -21,7 +22,7 @@ html, body{
 h1, h2, h3, h4, h5, h6{ font-family: $font-family-h; }
 a{
 	text-decoration: none;
-	display: table;
+	display: inline-block;
 }
 input, select, textarea{
 	width: 100%;
@@ -31,7 +32,7 @@ input, select, textarea{
 	border-radius: 3px;
 	transition: all 0.5s;
 }
-select{cursor: pointer;}
+select{cursor: pointer;color: #535C6B;}
 textarea{
 	height: 100px;
 	resize: none;
@@ -81,6 +82,26 @@ input[data-btn='final']{
 input:invalid {
   background-color: rgba($color-danger, 0.25);
 }
+
+table{ text-align: center; }
+table{
+	th{
+		vertical-align: middle !important;
+	}
+}
+.table tbody+tbody{
+	border-top: 0px;
+}
+/*Iniciales de Formularios*/
+#msform{
+	position: relative;
+	.container{
+		position: relative;
+	}
+}
+#msform .container:not(:first-of-type) {
+	display: none;
+}
 .container{
 	.row{
 		.col-sm{
@@ -129,5 +150,168 @@ input:invalid {
 			color: $color-danger;
 			font-weight: bold;
 		}
+	}
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  overflow: hidden;
+}
+.tab .tabs {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: rgba(#DEDFE1, 0.3);
+  color:$color-dos;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  /* background: #fff; */
+  transition: max-height .35s;
+  .row{
+  	padding: 1rem;
+  }
+}
+.tab-content p {
+  margin: 1em;
+}
+.tab-content table td{
+	padding: 0rem 1rem; 
+}
+.tab-content input{
+	width: 100px;
+}
+
+/* :checked */
+.tab .tabs:checked ~ .tab-content {
+  max-height: 100vh;
+}
+/* Icon */
+.tab label::after {
+  position: absolute;
+  right: 0;
+  top: -7px;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.tab .tabs[type=checkbox] + label::after {
+  content: "+";
+  font-size: 18px;
+}
+.tab .tabs[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+
+/*Check*/
+.check{
+	/* background: red; */
+	input{
+		display: inline-block;
+		width: 20px;
+		/* background: green; */
+	}
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  top: 6.333333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: $color-uno;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: $color-dos;
+}
+.option-input:checked::before {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 13px;
+  text-align: center;
+  line-height: 20px;
+}
+.option-input:checked::after {
+  background: $color-dos;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+/*Cajas Paginación formulario*/
+#msform{
+	position: relative;
+}
+#msform fieldset{
+	margin-bottom: 3rem;
+	position: absolute;
+}
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*Botón agregar y eliminiar*/
+.add{
+	background: $color-add;
+	border: 0px;
+	padding: 0.5rem 1rem;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 45% 55% 56% 44% / 26% 60% 40% 74% ;
+	cursor: pointer;
+	transition: all 0.2s;
+
+
+	&:hover{
+		border-radius: 50% 5px ;
+	}
+	&:active, 
+	&:focus{
+		outline: none !important;	
+	}
+	&:active{
+		transform: scale(0.9);
+	}
+	&.minus{
+		background: $color-danger;
 	}
 }

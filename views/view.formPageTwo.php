@@ -1,4 +1,4 @@
-<div class="container">
+<fieldset class="container">
 	<section class="section-page">
 		<h2>Paso 2</h2>
 		<p>Recuerde que los campos con aterisco (<span> * </span>) son obligatorios.</p>
@@ -59,10 +59,8 @@
 		</div>
 
 	</section>
-	<div class="row">
-		<div class="col-sm">
-			<input type="button" data-btn="atras" value="Atras">
-			<input type="button" data-btn="siguiente" value="Siguiente">
-			<!-- <input type="submit" data-btn="final" value="Enviar Proyecto"> -->
-		</div>
-	</div>
+	<br>
+	<input type="button" name="prev" class="btn-prev" data-btn="atras" value="Atras" />
+	<input type="button" name="next" class="btn-next" data-btn="siguiente" value="Siguiente" />
+	<input type="submit" data-btn="final" value="Enviar Proyecto">
+</fieldset>

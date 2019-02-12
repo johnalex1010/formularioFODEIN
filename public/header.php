@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<base href="http://localhost/JohnAlexUSTA/FormularioUInvestigadores/FormularioUInvestigadoresV2.0/">
+	<!-- <base href="http://localhost/JohnAlexUSTA/FormularioUInvestigadores/FormularioUInvestigadoresV2.0/"> -->
 	<!-- METAS -->
 	<meta charset="UTF-8" />
 	<title>Formulario FODEIN</title>
@@ -27,3 +27,5 @@
 			</div>
 		</div>
 	</div>
+	<form action="" id="msform" method="POST"><!-- 
+		
