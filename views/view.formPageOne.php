@@ -46,18 +46,21 @@
 				<span class="required">*</span>
 				<select name="" id="">
 					<option value="">Seleccione una división</option>
+					<?php division(); ?>
 				</select>
 			</div>
 			<div class="col-sm">
 				<span class="required">*</span>
 				<select name="" id="">
 					<option value="">Seleccione una facultad</option>
+					<?php facultad(); ?>
 				</select>
 			</div>
 			<div class="col-sm">
 				<span class="required">*</span>
 				<select name="" id="">
 					<option value="">Seleccione un programa</option>
+					<?php programa(); ?>
 				</select>
 			</div>
 		</div>
@@ -67,18 +70,21 @@
 				<span class="required">*</span>
 				<select name="" id="">
 					<option value="">Seleccione una línea activa</option>
+					<?php lineaActiva(); ?>
 				</select>
 			</div>
 			<div class="col-sm">
 				<span class="required">*</span>
 				<select name="" id="">
 					<option value="">Seleccione un campo de acción</option>
+					<?php camposAccion(); ?>
 				</select>
 			</div>
 			<div class="col-sm">
 				<span class="required">*</span>
 				<select name="" id="">
 					<option value="">Seleccione un grupo de investigación</option>
+					<?php gInvestigacion(); ?>
 				</select>
 			</div>
 		</div>
