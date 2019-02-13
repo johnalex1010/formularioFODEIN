@@ -6,7 +6,7 @@ $color-add: #48DDA8;
 $color-danger: #ED4D4C;
 $font-family-p: 'Roboto', sans-serif;
 $font-family-h: 'Fjalla One', sans-serif;
-$color-grey: #F8F9FB;
+$color-grey: #F7F8FA;
 
 /*Estilos generales*/
 *{
@@ -82,15 +82,23 @@ input[data-btn='final']{
 input:invalid {
   background-color: rgba($color-danger, 0.25);
 }
-
-table{ text-align: center; }
 table{
+	text-align: center;
 	th{
 		vertical-align: middle !important;
+	}
+	th,td{
+		border: 0px !important;
 	}
 }
 .table tbody+tbody{
 	border-top: 0px;
+}
+.table .thead-light th{
+	padding: 0.4rem;
+	border: 0px;
+	border-radius: 5px;
+	background: darken($color-grey, 20);
 }
 /*Iniciales de Formularios*/
 #msform{

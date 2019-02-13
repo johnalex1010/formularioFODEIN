@@ -49,6 +49,7 @@
 			<div class="col-sm">
 				<span class="required">*</span>
 				<!-- <span class="error">Soy un error</span> -->
+				<b>Por favor adjunte un PDF del marco teórico de un máximo de 5MB.</b>
 				<input type="file">
 			</div>
 			<div class="col-sm">

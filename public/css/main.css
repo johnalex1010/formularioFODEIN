@@ -109,12 +109,19 @@ input:invalid {
 
 table {
   text-align: center; }
-
-table th {
-  vertical-align: middle !important; }
+  table th {
+    vertical-align: middle !important; }
+  table th, table td {
+    border: 0px !important; }
 
 .table tbody + tbody {
   border-top: 0px; }
+
+.table .thead-light th {
+  padding: 0.4rem;
+  border: 0px;
+  border-radius: 5px;
+  background: #b8c1d3; }
 
 /*Iniciales de Formularios*/
 #msform {
@@ -155,7 +162,7 @@ table th {
 
 .section-page {
   border: 1px solid #EFF0F5;
-  background: #F8F9FB;
+  background: #F7F8FA;
   padding: 2rem; }
   .section-page h2 {
     /* text-align: right; */ }

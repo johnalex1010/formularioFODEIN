@@ -1,10 +1,10 @@
 <fieldset class="container">
 	<section class="section-page">
-		<h2>Paso 5</h2>
+		<h2>Paso 5 - FODEIN</h2>
 		<p>Recuerde que los campos con aterisco (<span> * </span>) son obligatorios.</p>
 		<hr>
+		<h5>Horas nómina del investigador principal</h5>
 		<div class="row">
-			<div class="col-sm">Horas nómina del investigador principal</div>
 			<div class="col-sm">
 				<span class="required">*</span>
 				<!-- <span class="error">Soy un error</span> -->
