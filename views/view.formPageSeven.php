@@ -26,7 +26,7 @@
 						<td>
 							<span class="required">*</span>
 							<!-- <span class="error">Soy un error</span> -->
-							<input type="text" placeholder="Total Horas en pesos ($)">
+							<input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total horas en pesos ($)">
 						</td>
 						<td>Agregar item <button id="add3" class="add add_field_buttonCE-A">+</button></td>
 					</tr>
@@ -56,7 +56,7 @@
 								</select>
 							</td>
 							<td><input type="text" name="[]" placeholder="Descripción"></td>
-							<td><input type="text" name="[]" placeholder="Total en pesos ($)"></td>
+							<td><input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td>
 						</tr>
 					</tbody>
 			</table>
@@ -67,7 +67,7 @@
 		<div class="row">
 			<div class="col-8"></div>
 			<div class="col-4">
-				<input type="text" name="[]" placeholder="Total contrapartida externa en pesos ($)">
+				<input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total contrapartida externa en pesos ($)">
 			</div>
 		</div>
 		<br>
@@ -75,7 +75,7 @@
 			<div class="col-8">El valor total del proyecto es la suma del FODEIN y de la Contrapartida Externa</div>
 			<div class="col-4">
 				<span class="required">*</span>
-				<input type="text" name="[]" placeholder="Valor total del proyecto en pesos ($)">
+				<input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Valor total del proyecto en pesos ($)">
 			</div>
 		</div>
 	</section>

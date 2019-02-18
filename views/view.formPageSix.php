@@ -69,12 +69,12 @@
 					<input type="text" name="" placeholder="Horas por mes">
 				</div>
 				<div class="col-sm">
-					<input type="text" name="" placeholder="Total Horas en pesos ($)">
+					<input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total horas en pesos ($)">
 				</div>
 			</div>
 			<hr>
 		</div>
-		<hr>
+		<!-- <hr> -->
 		<div class="input_fields_wrapCO">
 		<!-- Dynamic Fields go here -->
 		</div>
@@ -85,7 +85,7 @@
 			<div class="col-sm"></div>
 			<div class="col-sm">
 				<span class="required">*</span>
-				<input type="text" name="" placeholder="Total FODEIN en pesos ($)">
+				<input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total FODEIN en pesos ($)">
 			</div>
 		</div>
 	</section>

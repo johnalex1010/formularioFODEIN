@@ -67,6 +67,91 @@ $(".btn-prev").click(function() {
 	});
 });
 
+// CONTAR CARACTERES PASO 2
+function contar1() { 
+    var max = "1000"; 
+    var cadena = document.getElementById("resumenPro").value; 
+    var longitud = cadena.length; 
+
+    if(longitud <= max) { 
+      document.getElementById("contadorUno").value = max-longitud; 
+    } else { 
+      document.getElementById("resumenPro").value = cadena.substr(0, max);
+    } 
+}
+
+function contar2() { 
+    var max = "2000"; 
+    var cadena = document.getElementById("palabrasClave").value; 
+    var longitud = cadena.length; 
+
+    if(longitud <= max) { 
+      document.getElementById("contadorDos").value = max-longitud; 
+    } else { 
+      document.getElementById("palabrasClave").value = cadena.substr(0, max);
+    } 
+}
+
+function contar3() { 
+    var max = "2000"; 
+    var cadena = document.getElementById("planteamiento").value; 
+    var longitud = cadena.length; 
+
+    if(longitud <= max) { 
+      document.getElementById("contadorTres").value = max-longitud; 
+    } else { 
+      document.getElementById("planteamiento").value = cadena.substr(0, max);
+    } 
+}
+
+function contar4() { 
+    var max = "2000"; 
+    var cadena = document.getElementById("justificacion").value; 
+    var longitud = cadena.length; 
+
+    if(longitud <= max) { 
+      document.getElementById("contadorCuatro").value = max-longitud; 
+    } else { 
+      document.getElementById("justificacion").value = cadena.substr(0, max);
+    } 
+}
+
+function contar5() { 
+    var max = "2000"; 
+    var cadena = document.getElementById("ObjGen").value; 
+    var longitud = cadena.length; 
+
+    if(longitud <= max) { 
+      document.getElementById("contadorCinco").value = max-longitud; 
+    } else { 
+      document.getElementById("ObjGen").value = cadena.substr(0, max);
+    } 
+}
+
+function contar6() { 
+    var max = "2000"; 
+    var cadena = document.getElementById("ObjEsp").value; 
+    var longitud = cadena.length; 
+
+    if(longitud <= max) { 
+      document.getElementById("contadorSeis").value = max-longitud; 
+    } else { 
+      document.getElementById("ObjEsp").value = cadena.substr(0, max);
+    } 
+}
+
+function contar7() { 
+    var max = "2000"; 
+    var cadena = document.getElementById("metodologia").value; 
+    var longitud = cadena.length; 
+
+    if(longitud <= max) { 
+      document.getElementById("contadorSiete").value = max-longitud; 
+    } else { 
+      document.getElementById("metodologia").value = cadena.substr(0, max);
+    } 
+}
+
 //ADD REMOVE PASO 5
 $(document).ready(function() {
     var max_fields      = 6; //maximum input boxes allowed
@@ -78,7 +163,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMe"><table class="table"><tbody id="addItems1"><tr><td><select name="[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="[]" placeholder="Descripción"></td><td><input type="text" name="[]" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-date add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
+            $(wrapper).append('<div class="removeMe"><table class="table"><tbody id="addItems1"><tr><td><select name="[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="[]" placeholder="Descripción"></td><td><input type="tel" pattern="^([0-9.]{1,2})*$" name="[]" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-date add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
         }
     });
     
@@ -98,7 +183,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMeCO"><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Nombre(s) y apellido(s) del Co-Investigador"></div><div class="col-sm"><input type="text" name="" placeholder="Enlace CvLAC"></div></div><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Enlace ORCID"></div><div class="col-sm"><input type="text" name="" placeholder="Enlace Google Académico"></div></div><div class="row"><div class="col-sm"><select name="" id=""><option value="">Selecciona una división</option>'+division+'</select></div><div class="col-sm"><select name="" id=""><option value="">Selecciona una facultad</option>'+facultad+'</select></div><div class="col-sm"><select name="" id=""><option value="">Selecciona un programa</option>'+programa+'</select></div></div><div class="row"><div class="col-sm"><select name="" id=""><option value="">Selecciona una línea activa</option>'+lineaActiva+'</select></div><div class="col-sm"><select name="" id=""><option value="">Seleccionar un campo de acción</option>'+campoAccion+'</select></div><div class="col-sm"><select name="" id=""><option value="">Seleccionar un grupo de investigación</option>'+gInvestigacion+'</select></div></div><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Escalafón"></div><div class="col-sm"><input type="text" name="" placeholder="Horas por mes"></div><div class="col-sm"><input type="text" name="" placeholder="Total Horas en pesos ($)"></div></div><div style="text-align:right"><b>Eliminar Co-Investigador</b> <button class="remove-dateCO add minus" id="delete">-</button></div><hr></div>'); //add input box
+            $(wrapper).append('<div class="removeMeCO"><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Nombre(s) y apellido(s) del Co-Investigador"></div><div class="col-sm"><input type="text" name="" placeholder="Enlace CvLAC"></div></div><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Enlace ORCID"></div><div class="col-sm"><input type="text" name="" placeholder="Enlace Google Académico"></div></div><div class="row"><div class="col-sm"><select name="" id=""><option value="">Selecciona una división</option>'+division+'</select></div><div class="col-sm"><select name="" id=""><option value="">Selecciona una facultad</option>'+facultad+'</select></div><div class="col-sm"><select name="" id=""><option value="">Selecciona un programa</option>'+programa+'</select></div></div><div class="row"><div class="col-sm"><select name="" id=""><option value="">Selecciona una línea activa</option>'+lineaActiva+'</select></div><div class="col-sm"><select name="" id=""><option value="">Seleccionar un campo de acción</option>'+campoAccion+'</select></div><div class="col-sm"><select name="" id=""><option value="">Seleccionar un grupo de investigación</option>'+gInvestigacion+'</select></div></div><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Escalafón"></div><div class="col-sm"><input type="text" name="" placeholder="Horas por mes"></div><div class="col-sm"><input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total horas en pesos ($)"></div></div><div style="text-align:right"><b>Eliminar Co-Investigador</b> <button class="remove-dateCO add minus" id="delete">-</button></div><hr></div>'); //add input box
         }
     });
     
@@ -118,7 +203,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMeCE-A"><table class="table"><tbody><tr><td><input type="text" placeholder="Nombres completos"></td><td><input type="text" placeholder="Escalafón"></td><td><input type="text" placeholder="Horas por mes"></td><td><input type="text" placeholder="Total Horas en pesos ($)"></td><td>Eliminar item <button class="remove-dateCE-A add minus" id="delete">-</button></td></tr></tbody></table></div>'); //add input box
+            $(wrapper).append('<div class="removeMeCE-A"><table class="table"><tbody><tr><td><input type="text" placeholder="Nombres completos"></td><td><input type="text" placeholder="Escalafón"></td><td><input type="text" placeholder="Horas por mes"></td><td><input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><td>Eliminar item <button class="remove-dateCE-A add minus" id="delete">-</button></td></tr></tbody></table></div>'); //add input box
         }
     });
     
@@ -138,7 +223,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMeCE-B"><table class="table"><tbody id="addItems1"><tr><td><select name="[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="[]" placeholder="Descripción"></td><td><input type="text" name="[]" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-dateCE-B add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
+            $(wrapper).append('<div class="removeMeCE-B"><table class="table"><tbody id="addItems1"><tr><td><select name="[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="[]" placeholder="Descripción"></td><td><input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-dateCE-B add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
         }
     });
     
@@ -165,4 +250,29 @@ $(document).ready(function() {
     $(wrapper).on("click",".remove-dateCAL", function(e){ //user click on remove text
         e.preventDefault(); $(this).closest('div.removeMeCAL').remove(); x--;
     })
+});
+
+// FUNCIÓN PARA FORMATO MILES ($)
+function format(input){
+    var num = input.value.replace(/\./g,'');
+    if(!isNaN(num)){
+        num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g,'$1.');
+        num = num.split('').reverse().join('').replace(/^[\.]/,'');
+        input.value = num;
+    }else{
+        // alert('Solo se permiten numeros');
+        input.value = input.value.replace(/[^\d\.]*/g,'');
+    }
+}
+
+//FUNCIÓN CLICK EN BTN - PROGRESS BAR
+function progressBar(){
+    document.getElementById("enviar").innerHTML = "<div class='modals'><div class='contentModal'><div class='progresoBarra'><div class='cajaProgressBar'><div class='progress_container'><h3>Enviando...</h3><div class='progress progress-danger progress-striped active'><div class='bar' style='width: 100%'></div></div></div></div></div></div></div>";
+}
+
+//CERRAR MODAL
+$(document).ready(function(){
+    $("#cerrarModal").on( "click", function() {   
+        $('#modals').toggle();
+    });
 });

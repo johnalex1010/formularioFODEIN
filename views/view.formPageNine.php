@@ -37,7 +37,16 @@
 				<input type="email" placeholder="Para recibir una copia de este formulario por favor digite aquí su correo electrónico.">
 			</div>
 		</div>
-
+		<div class="row">
+			<div class="col-sm">
+				<div class="check">
+					<input type="checkbox" name="" value="Aceptar los términos y condiciones." class="option-input checkbox">
+					<label for="2. Compromiso con el proyecto educativo" >Aceptar los términos y condiciones. <a href="">Leer aquí</a></label>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2 style="text-align: center">ANTES DE PULSAR EL BOTÓN ENVIAR POR FAVOR VERIFICAR LOS CAMPOS DEL FORMULARIO</h2>
 	</section>
 	<br>
 	<input type="button" name="prev" class="btn-prev" data-btn="atras" value="Atras" />

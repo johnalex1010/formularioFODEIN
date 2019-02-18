@@ -17,7 +17,7 @@
 			</div>
 			<div class="col-sm">
 				<span class="required">*</span>
-				<input type="text" placeholder="Total horas en pesos ($)">
+				<input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total horas en pesos ($)">
 			</div>
 		</div>
 		<br>
@@ -40,7 +40,7 @@
 								</select>
 							</td>
 							<td><input type="text" name="[]" placeholder="Descripción"></td>
-							<td><input type="text" name="[]" placeholder="Total en pesos ($)"></td>
+							<td><input type="tel" pattern="^([0-9.]{1,2})*$" name="[]" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td>
 						</tr>
 					</tbody>
 			</table>

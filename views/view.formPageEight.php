@@ -15,9 +15,18 @@
 				</thead>
 					<tbody>
 						<tr>
-							<td><input type="text" name="[]" placeholder="Actividad"></td>
-							<td><input type="date" name="[]" placeholder="Descripción"></td>
-							<td><input type="date" name="[]" placeholder="Total en pesos ($)"></td>
+							<td>
+								<span class="required">*</span>
+								<input type="text" name="[]" placeholder="Actividad">
+							</td>
+							<td>
+								<span class="required">*</span>
+								<input type="date" name="[]" placeholder="Descripción">
+							</td>
+							<td>
+								<span class="required">*</span>
+								<input type="date" name="[]" placeholder="Total en pesos ($)">
+							</td>
 						</tr>
 					</tbody>
 			</table>

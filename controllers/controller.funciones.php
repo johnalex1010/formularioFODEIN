@@ -265,4 +265,8 @@
 		echo "<option value='Servicios técnicos'>Servicios técnicos</option>";
 		echo "<option value='Auxilio de transporte'>Auxilio de transporte</option>";
 	}
+
+	function error(){
+		
+	}
 ?>
