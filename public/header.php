@@ -31,5 +31,5 @@
 			</div>
 		</div>
 	</div>
-	<form action="" id="msform" method="POST">
+	<form action="" id="msform" method="POST" enctype="multipart/form-data" >
 		

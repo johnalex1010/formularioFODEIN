@@ -108,6 +108,20 @@ input[data-btn='final'] {
 input:invalid {
   background-color: rgba(237, 77, 76, 0.25); }
 
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5); }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5); }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5); }
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5); }
+
 table {
   text-align: center; }
   table th {
@@ -115,6 +129,9 @@ table {
   table th, table td {
     border: 0px !important;
     position: relative; }
+
+.half table {
+  text-align: left; }
 
 .table tbody + tbody {
   border-top: 0px; }
@@ -339,7 +356,7 @@ table {
   height: 100vh;
   top: 0px;
   left: 0px;
-  z-index: 2;
+  z-index: 1001;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,6 +373,9 @@ table {
     border-radius: 3px;
     /*Progress Bar*/
     /*Fin barProgress*/ }
+    .modals .contentModal p {
+      text-align: center;
+      font-weight: bold; }
     .modals .contentModal .contentItem ul {
       list-style: none; }
       .modals .contentModal .contentItem ul li {
@@ -404,3 +424,6 @@ table {
     background-position: 0 0; }
   to {
     background-position: 200px 0; } }
+
+.tablePaso3 td:first-child {
+  min-width: 350px; }

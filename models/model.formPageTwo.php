@@ -59,7 +59,22 @@
 		$error[2][6] = "error";
 	}
 
-//MARCO TEÓRICO -- falta
+//MARCO TEÓRICO
+	$tipoFileMT = $_FILES['marcoTeorico']['type'];
+	$pesoMT = $_FILES['marcoTeorico']['size'];
+	$fileNameMT = $_FILES['marcoTeorico']['name'];
+	$tmpMT = $_FILES['marcoTeorico']['tmp_name'];
+
+	if (empty($tmpMT)) {
+		$msjMarcoTeorico = "El campo es obligatorio.";
+		$error[2][7] = "error";
+	}elseif($tipoFileMT != "application/pdf"){
+		$msjMarcoTeorico = "El adjunto debe ser un PDF.";
+		$error[2][7] = "error";
+	}elseif ($pesoMT > 6000000) {
+		$msjMarcoTeorico = "El archivo debe ser un PDF, máximo de 5Mb";
+		$error[2][7] = "error";
+	}
 
 //METODOLOGÍA
 	$metodologia = trim($_POST['metodologia']);

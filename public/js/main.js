@@ -163,7 +163,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMe"><table class="table"><tbody id="addItems1"><tr><td><select name="[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="[]" placeholder="Descripción"></td><td><input type="tel" pattern="^([0-9.]{1,2})*$" name="[]" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-date add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
+            $(wrapper).append('<div class="removeMe"><table class="table"><tbody id="addItems1"><tr><td><select name="FEConcep[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="FEDesc[]" placeholder="Descripción"></td><td><input type="tel" pattern="^([0-9.]{1,2})*$" name="FETotal[]" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-date add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
         }
     });
     
@@ -183,7 +183,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMeCO"><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Nombre(s) y apellido(s) del Co-Investigador"></div><div class="col-sm"><input type="text" name="" placeholder="Enlace CvLAC"></div></div><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Enlace ORCID"></div><div class="col-sm"><input type="text" name="" placeholder="Enlace Google Académico"></div></div><div class="row"><div class="col-sm"><select name="" id=""><option value="">Selecciona una división</option>'+division+'</select></div><div class="col-sm"><select name="" id=""><option value="">Selecciona una facultad</option>'+facultad+'</select></div><div class="col-sm"><select name="" id=""><option value="">Selecciona un programa</option>'+programa+'</select></div></div><div class="row"><div class="col-sm"><select name="" id=""><option value="">Selecciona una línea activa</option>'+lineaActiva+'</select></div><div class="col-sm"><select name="" id=""><option value="">Seleccionar un campo de acción</option>'+campoAccion+'</select></div><div class="col-sm"><select name="" id=""><option value="">Seleccionar un grupo de investigación</option>'+gInvestigacion+'</select></div></div><div class="row"><div class="col-sm"><input type="text" name="" placeholder="Escalafón"></div><div class="col-sm"><input type="text" name="" placeholder="Horas por mes"></div><div class="col-sm"><input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total horas en pesos ($)"></div></div><div style="text-align:right"><b>Eliminar Co-Investigador</b> <button class="remove-dateCO add minus" id="delete">-</button></div><hr></div>'); //add input box
+            $(wrapper).append('<div class="removeMeCO"><div class="row"><div class="col-sm"><input type="text" name="nombreInvestigadorCO[]" placeholder="Nombre(s) y apellido(s) del Co-Investigador"></div><div class="col-sm"><input type="text" name="urlCvLACCO[]" placeholder="Enlace CvLAC"></div></div><div class="row"><div class="col-sm"><input type="text" name="urlORCIDCO[]" placeholder="Enlace ORCID"></div><div class="col-sm"><input type="text" name="urlGooAcaCO[]" placeholder="Enlace Google Académico"></div></div><div class="row"><div class="col-sm"><select name="divisionCOI[]" id=""><option value="">Selecciona una división</option>'+division+'</select></div><div class="col-sm"><select name="facultadCOI[]" id=""><option value="">Selecciona una facultad</option>'+facultad+'</select></div><div class="col-sm"><select name="programaCOI[]" id=""><option value="">Selecciona un programa</option>'+programa+'</select></div></div><div class="row"><div class="col-sm"><select name="lineaActivaCOI[]" id=""><option value="">Selecciona una línea activa</option>'+lineaActiva+'</select></div><div class="col-sm"><select name="camposAccionCOI[]" id=""><option value="">Seleccionar un campo de acción</option>'+campoAccion+'</select></div><div class="col-sm"><select name="gInvestigacionCOI[]" id=""><option value="">Seleccionar un grupo de investigación</option>'+gInvestigacion+'</select></div></div><div class="row"><div class="col-sm"><input type="text" name="esfalafonCOI[]" placeholder="Escalafón"></div><div class="col-sm"><input type="text" name="hxmCOI[]" placeholder="Horas por mes"></div><div class="col-sm"><input type="tel" name="thCOI[]" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total horas en pesos ($)"></div></div><div style="text-align:right"><b>Eliminar Co-Investigador</b> <button class="remove-dateCO add minus" id="delete">-</button></div><hr></div>'); //add input box
         }
     });
     
@@ -203,7 +203,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMeCE-A"><table class="table"><tbody><tr><td><input type="text" placeholder="Nombres completos"></td><td><input type="text" placeholder="Escalafón"></td><td><input type="text" placeholder="Horas por mes"></td><td><input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><td>Eliminar item <button class="remove-dateCE-A add minus" id="delete">-</button></td></tr></tbody></table></div>'); //add input box
+            $(wrapper).append('<div class="removeMeCE-A"><table class="table"><tbody><tr><td><input type="text" name="nomInvesCE[]" pattern="[a-zA-Z ñÑáéíóúÁÉÍÓÚ]{3,50}" maxlength="50" placeholder="Nombres completos"></td><td><input type="text" name="escalafonCE[]" placeholder="Escalafón"></td><td><input type="text" name="HxMesCE[]" placeholder="Horas por mes"></td><td><input type="tel" name="TotalHCE[]" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><td>Eliminar item <button class="remove-dateCE-A add minus" id="delete">-</button></td></tr></tbody></table></div>'); //add input box
         }
     });
     
@@ -223,7 +223,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMeCE-B"><table class="table"><tbody id="addItems1"><tr><td><select name="[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="[]" placeholder="Descripción"></td><td><input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-dateCE-B add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
+            $(wrapper).append('<div class="removeMeCE-B"><table class="table"><tbody id="addItems1"><tr><td><select name="CEConcep[]" id=""><option value="">Seleccionar concepto</option>'+concepto+'</select></td><td><input type="text" name="CEDesc[]" placeholder="Descripción"></td><td><input type="tel" name="CETotal[]" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-dateCE-B add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
         }
     });
     
@@ -243,7 +243,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div class="removeMeCAL"><table class="table"><tbody id="addItems1"><tr><td><input type="text" name="[]" placeholder="Actividad"></td><td><input type="date" name="[]" placeholder="Descripción"></td><td><input type="date" name="[]" placeholder="Total en pesos ($)"></td><th>Eliminar items <button class="remove-dateCAL add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
+            $(wrapper).append('<div class="removeMeCAL"><table class="table"><tbody id="addItems1"><tr><td><input type="text" name="actividad[]" placeholder="Nombre de la actividad"></td><td><input type="date" name="FIni[]"></td><td><input type="date" name="FFIn[]"></td><th>Eliminar items <button class="remove-dateCAL add minus" id="delete">-</button></th></tr></tbody></table></div>'); //add input box
         }
     });
     
