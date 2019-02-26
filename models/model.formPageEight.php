@@ -46,6 +46,16 @@
 		$error[8][3][0] = "error";
 		$msjFFIn[0] = "El campo es obligatorio";
 	}
-		
-		
+
+	if (!isset($error[8])) {
+		$contActi = count($actividad);		
+		for ($iCRONO=0; $iCRONO<$contActi; $iCRONO++) {
+		    $echo6 .= "<tr>";
+		    $echo6 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$actividad[$iCRONO]."</td>";
+		    $echo6 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$FIni[$iCRONO]."</td>";
+		    $echo6 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$FFIn[$iCRONO]."</td>";
+		    $echo6 .= "</tr>";
+		}
+	}
+
 ?>

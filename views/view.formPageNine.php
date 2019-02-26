@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="col-sm">
 				<span class="<?php echo $error[9][4] ?>"><?php echo $msjEmailCopia; ?></span>
-				<input type="email" name="emailCopia" placeholder="Para recibir una copia de este formulario por favor digite aquí su correo electrónico.">
+				<input type="email" name="emailCopia" placeholder="Para recibir una copia de este formulario por favor digite aquí su correo electrónico." value="<?php echo $emailCopia ?>">
 			</div>
 		</div>
 		<div class="row">

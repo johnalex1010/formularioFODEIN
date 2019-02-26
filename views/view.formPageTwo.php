@@ -7,7 +7,7 @@
 			<div class="col-sm">
 				<span class="required">*</span>
 				<span class="<?php echo $error[2][1] ?>"><?php echo $msjResumen ?></span>
-				<textarea name="resumenPro" id="resumenPro" maxlength="1000" placeholder="Resumen de la proopuesta (1000 caracteres maxímo)" onKeyDown="contar1()" onKeyUp="contar1()"><?php echo $_POST['resumenPro'] ?></textarea>
+				<textarea name="resumenPro" id="resumenPro" maxlength="1000" placeholder="Resumen de la propuesta (1000 caracteres maxímo)" onKeyDown="contar1()" onKeyUp="contar1()"><?php echo $_POST['resumenPro'] ?></textarea>
 				<input disabled value="1000" id="contadorUno" class="contador">
 			</div>
 			<div class="col-sm">

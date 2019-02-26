@@ -125,4 +125,36 @@
 		$error[6][5] = "error";
 		$msjTFodein = "El campo es obligatorio";
 	}
+
+$contCOI = count($nombreInvestigadorCO);
+$rowspanCOI = $contCOI+1;
+//For para coinvestigadores con URL
+for ($iCO=0; $iCO<$contCOI; $iCO++) {
+	$echo2 .= "<tr>";
+    $echo2 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$nombreInvestigadorCO[$iCO]."</td>";
+    $echo2 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$urlCvLACCO[$iCO]."</td>";
+    $echo2 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$urlORCIDCO[$iCO]."</td>";
+    $echo2 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$urlGooAcaCO[$iCO]."</td>";
+    $echo2 .= "</tr>";
+}
+//For para coinvestigadores FODEIN
+	for ($iCO=0; $iCO<$contCOI; $iCO++) {
+		$echo3 .= "<tr>"; 
+	    $echo3 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$nombreInvestigadorCO[$iCO]."</td>";
+	    $echo3 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$esfalafonCOI[$iCO]."</td>";
+	    $echo3 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>".$hxmCOI[$iCO]."</td>";
+	    $echo3 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;'>$ ".$thCOI[$iCO]."</td>";
+	    $echo3 .= "</tr>";
+	}
+
+	for ($iCO=0; $iCO<$contCOI; $iCO++) {
+		$echo7 .= "<tr>";
+       	$echo7 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;' width='16.666%'>".$divisionCOI[$iCO]."</td>";
+       	$echo7 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;' width='16.666%'>".$facultadCOI[$iCO]."</td>";
+       	$echo7 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;' width='16.666%'>".$programaCOI[$iCO]."</td>";
+       	$echo7 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;' width='16.666%'>".$lineaActivaCOI[$iCO]."</td>";
+       	$echo7 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;' width='16.666%'>".$camposAccionCOI[$iCO]."</td>";
+       	$echo7 .= "<td style='padding: 0.3rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: center;' width='16.666%'>".$gInvestigacionCOI[$iCO]."</td>";
+    	$echo7 .= "</tr>";
+	}
 ?>

@@ -116,7 +116,7 @@
 		<div class="row">
 			<div class="col-8"></div>
 			<div class="col-4">
-				<input type="tel" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total contrapartida externa en pesos ($)">
+				<input type="tel" name="TCE" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Total contrapartida externa en pesos ($)" value="<?php echo $TCE; ?>">
 			</div>
 		</div>
 		<br>
@@ -125,7 +125,7 @@
 			<div class="col-4">
 				<span class="required">*</span>
 				<span class="<?php echo $error[7][2]; ?>"><?php echo $msjTVPr; ?></span>
-				<input type="tel" name="TVPr" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Valor total del proyecto en pesos ($)">
+				<input type="tel" name="TVPr" pattern="^([0-9.]{1,2})*$" onkeyup="format(this)" onchange="format(this)" placeholder="Valor total del proyecto en pesos ($)" value="<?php echo $TVPr ?>">
 			</div>
 		</div>
 	</section>

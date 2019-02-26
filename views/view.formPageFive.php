@@ -80,5 +80,5 @@
 	<br>
 	<input type="button" name="prev" class="btn-prev" data-btn="atras" value="Atras" />
 	<input type="button" name="next" class="btn-next" data-btn="siguiente" value="Siguiente" />
-	<input type="submit" name="submit" id="submit" data-btn="final" value="Enviar Proyecto" onclick="progressBar()">
+	<!-- <input type="submit" name="submit" id="submit" data-btn="final" value="Enviar Proyecto" onclick="progressBar()"> -->
 </fieldset>
