@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
 						if ($i == 0) {echo "<li style='background: #25CB91'>PASO 9: Esta correcto.</li>";}else{echo "<li style='background: #ED4D4C'>PASO 9: Tiene ".$i." errores.</li>";}
 					echo "</ul>";
 				echo "</div><hr>";
-				echo "<p>Tenga en cuenta en volver a cargar los archivos adjuntos.</p><hr>";
+				echo "<p>Tenga en cuenta volver a cargar los archivos adjuntos.</p><hr>";
 				echo "<div class='btn btn-danger' id='cerrarModal'>Cerrar</div>";
 			echo "</div>";
 		echo "</div>";

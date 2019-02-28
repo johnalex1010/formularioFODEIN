@@ -7,7 +7,7 @@
 			<div class="col-sm">
 				<span class="required">*</span>
 				<div class="<?php echo $error[1][1] ?>"><?php echo $msjTitulo ?></div>
-				<input type="text" pattern="[a-zA-Z ñÑáéíóúÁÉÍÓÚ]{3,50}" maxlength="100" placeholder="Título del proyecto" name="titulo" value="<?php echo $_POST['titulo'] ?>">
+				<input type="text" placeholder="Título del proyecto" name="titulo" value="<?php echo $_POST['titulo'] ?>">
 			</div>
 			<div class="col-sm">
 				<span class="required">*</span>

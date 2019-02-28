@@ -46,7 +46,7 @@
 					<span class="required">*</span>
 					<span class="<?php echo $error[9][5] ?>"><?php echo $msjTerminos; ?></span>
 					<input type="checkbox" name="terminos" value="Aceptar los términos y condiciones." class="option-input checkbox" <?php if (!empty($terminos)) {echo "checked";}?>>
-					<label for="2. Compromiso con el proyecto educativo" >Aceptar los términos y condiciones. <a href="">Leer aquí</a></label>
+					<label for="2. Compromiso con el proyecto educativo" >Aceptar los términos y condiciones. <a href="https://www.usta.edu.co/index.php/aviso-de-privacidad" target="_blank">Leer aquí</a></label>
 				</div>
 			</div>
 		</div>

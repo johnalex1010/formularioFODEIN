@@ -1,4 +1,3 @@
-HOLA
 <?php
 error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 
@@ -39,7 +38,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
     $mail->AddAttachment($dirProyecto."/".$fileNameCACIP);
     $mail->AddAttachment($dirProyecto."/".$fileNameFEBIC);
     $mail->AddAttachment($dirProyecto."/".$fileNameCAEE);
-    $mail->Subject = "Proyecto FODEIN 2019"; // El asunto del email
+    $mail->Subject = "Proyecto FODEIN 2020"; // El asunto del email
     $mail->Body = "
 <h1 style='color:#525B6A;text-align: center;font-family: sans-serif; font-size: 1.4rem;background:#F6F7F9;padding:0.3rem;max-width: 1000px; width: 90%; margin:1rem auto;box-sizing: border-box;'>Informe de Proyecto de Investigación</h1>
 <table class='tableMostrar' style='text-align: center; max-width: 1000px; width: 90%; margin: auto; border-collapse: collapse; font-family:sans-serif; background:#fff'>
@@ -98,6 +97,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
     </tr>
     $echo2
 </table>
+<br>
 <table class='tableMostrar' style='text-align: center; max-width: 1000px; width: 90%; margin: auto; border-collapse: collapse; font-family:sans-serif; background:#fff'>
     <tr>
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' width='16.666%'>División</th>
@@ -116,8 +116,8 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' width='50%'>Palabras clave</th>
     </tr>
     <tr>
-        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;' width='50%'>".$resumenPro."</td>
-        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;' width='50%'>".$palabrasClave."</td>
+        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;' width='50%'>".nl2br($resumenPro)."</td>
+        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;' width='50%'>".nl2br($palabrasClave)."</td>
     </tr>
 </table>
 <br>
@@ -126,7 +126,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;'>Planteamiento del problema y pregunta de investigación</th>
     </tr>
     <tr>
-        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".$planteamiento."</td>
+        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".nl2br($planteamiento)."</td>
     </tr>
 </table>
 <br>
@@ -135,7 +135,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;'>Justificación</th>
     </tr>
     <tr>
-        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".$justificacion."</td>
+        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".nl2br($justificacion)."</td>
     </tr>
 </table>
 <br>
@@ -144,7 +144,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;'>Objetivo general</th>
     </tr>
     <tr>
-        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".$ObjGen."</td>
+        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".nl2br($ObjGen)."</td>
     </tr>
 </table>
 <br>
@@ -153,7 +153,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;'>Objetivos específicos</th>
     </tr>
     <tr>
-        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".$ObjEsp."</td>
+        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".nl2br($ObjEsp)."</td>
     </tr>
 </table>
 <br>
@@ -171,7 +171,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;'>Metodología</th>
     </tr>
     <tr>
-        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".$metodologia."</td>
+        <td style='padding: 0.5rem;background: #fff;word-wrap: break-word;border: 1px solid #ddd;text-align: justify;'>".nl2br($metodologia)."</td>
     </tr>
 </table>
 <br>
@@ -312,14 +312,14 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' width='20%'>Total ($)</th>
     </tr>
     <tr>
-        <td style='font-family:sans-serif;font-weight: 300;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; padding: 0.5rem;'>Horas Nomina (Investigador Principal)</td>
+        <td style='font-family:sans-serif;font-weight: 300;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; padding: 0.5rem;'>Horas Nómina (Investigador Principal)</td>
         <td style='font-family:sans-serif;font-weight: 300;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; padding: 0.5rem;'>".$nombresIN."</td>
         <td style='font-family:sans-serif;font-weight: 300;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; padding: 0.5rem;'>".$FEescalafon."</td>
         <td style='font-family:sans-serif;font-weight: 300;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; padding: 0.5rem;'>".$FEHxMes."</td>
         <td style='font-family:sans-serif;font-weight: 300;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; padding: 0.5rem;'>$ ".$FETortl."</td>
     </tr>
     <tr>
-        <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' rowspan=".$rowspanCOI.">Horas Nomina (Co-Investigadores)</td>
+        <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' rowspan=".$rowspanCOI.">Horas Nómina (Co-Investigadores)</td>
         $echo3
 </table>
  <br>
@@ -348,7 +348,7 @@ error_reporting (E_ALL & ~E_NOTICE & ~E_DEPRECATED);
          <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' width='20%'>Total</th>
     </tr>
     <tr>
-        <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' rowspan=".$rowspanInvesCE.">Horas Nomina</td>
+        <th style='font-family:sans-serif;font-weight: 300;background: #F6F7F9;color: #525B6A;padding: 0.3rem; font-size: 0.9rem; border: 1px solid #ddd; background: #F6F7F9; padding: 0.5rem;' rowspan=".$rowspanInvesCE.">Horas Nómina</td>
         $echo4
 </table>
 <br>
